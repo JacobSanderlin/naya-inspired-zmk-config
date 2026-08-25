@@ -5,45 +5,10 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    name: Compiler
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Cache west modules
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-zephyr-modules
-        with:
-          path: |
-            modules
-            tools
-            zephyr
-            bootloader
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('config/west.yml') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-      - name: Initialize ZMK Workspace
-        uses: zmkfirmware/zmk-actions-toolkit/setup@v2
-
-      - name: Build Left Wing
-        uses: zmkfirmware/zmk-actions-toolkit/build@v2
-        with:
-          board: nice_nano_v2
-          shield: custom_split_left
-        
-      - name: Build Right Wing
-        uses: zmkfirmware/zmk-actions-toolkit/build@v2
-        with:
-          board: nice_nano_v2
-          shield: custom_split_right
-
-      - name: Upload Firmware Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: custom_split_firmware
-          path: build/zephyr/zmk.uf2
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      build_matrix_path: config/build.yaml

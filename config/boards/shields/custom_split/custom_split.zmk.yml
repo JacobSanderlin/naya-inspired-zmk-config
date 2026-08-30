@@ -1,0 +1,11 @@
+file_format: "1"
+id: custom_split
+name: Naya Split
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+  - underglow
+siblings:
+  - custom_split_left
+  - custom_split_right

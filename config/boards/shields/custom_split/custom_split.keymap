@@ -20,9 +20,10 @@
                 &none   &kp TAB   &kp Q    &kp W    &kp E     &kp R  &kp T                       &kp RBKT   &kp LBKT  &kp P     &kp O    &kp I    &kp U  &kp Y
                 &none   &kp CAPS  &kp A    &kp S    &kp D     &kp F  &kp G                       &kp BSLH   &kp SQT  &kp SEMI     &kp L    &kp K &kp J   &kp H
                 &none   &kp LSHFT &kp Z    &kp X    &kp C     &kp V  &kp B                       &none   &kp RSHFT  &kp FSLH &kp DOT  &kp COMMA &kp M &kp N
-                &mo 1   &kp LCTRL &kp LGUI &kp LALT &kp SPACE &none  &kp BSPC &mo 2    &mo 2     &mo 1 &RCTRL  &kp RGUI &kp RALT &kp SPACE &none &kp RET
+                &mo 1   &kp LCTRL &kp LGUI &kp LALT &kp SPACE &none  &kp BSPC &mo 2    &mo 1     &kp RCTRL &kp RGUI  &kp RALT &kp SPACE &none &kp RET &mo 1
             >;
         };
+
 
         // Layer 1: Hardware Management & Wireless Selection
         system_layer {

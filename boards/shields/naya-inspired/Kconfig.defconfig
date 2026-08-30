@@ -1,7 +1,7 @@
 if SHIELD_CUSTOM_SPLIT_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Naya Split"
+    default "Naya Inspired"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -11,7 +11,7 @@ endif # SHIELD_CUSTOM_SPLIT_LEFT
 if SHIELD_CUSTOM_SPLIT_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "Naya Split"
+    default "Naya Inspired"
 
 endif # SHIELD_CUSTOM_SPLIT_RIGHT
 
